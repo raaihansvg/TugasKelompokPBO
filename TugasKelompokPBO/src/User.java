@@ -1,4 +1,4 @@
-abstract class User{
+abstract class User implements CetakInfo{
     /* ATRIBUT */
     protected String id;
     protected String nama;
@@ -40,13 +40,18 @@ abstract class User{
     /* ABSTRACT METHOD */
     public abstract String getId();
     public abstract String getNama();
-    public abstract String Email();
-    public abstract String Hubungi();
+    public abstract String getEmail();
+    public abstract String getNoTelp();
 
     public void PrintDataDiri(){
         System.out.println("id: " + id);
         System.out.println("Nama: " + nama);
         System.out.println("email: " + email );
         System.out.println("NoTelp: " + noTelp);
+    }
+    /* INTERFACE METHOD */
+    @Override
+    public void cetakInfo(){
+        PrintDataDiri();
     }
 }
