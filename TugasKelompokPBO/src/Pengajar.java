@@ -67,7 +67,7 @@ public class Pengajar extends User{
     @Override
     public void PrintDataDiri(){
         super.PrintDataDiri();
-        System.out.println("spesialisasi " + spesialisasi);
+        System.out.println("Spesialisasi " + spesialisasi);
         System.out.println("gaji: " + gaji);
         System.out.println("kelas yang diajar: " + kelasYgDiajar);
     }   

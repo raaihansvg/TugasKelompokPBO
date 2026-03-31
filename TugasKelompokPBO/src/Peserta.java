@@ -15,9 +15,9 @@ public class Peserta extends User{
     }
     /* KONSTRUKTOR INPUT */
 
-    public Peserta(Date TanggalDaftar, String statusPembayaran, String kelas){
+    public Peserta(Date tanggalDaftar, String statusPembayaran, String kelas){
         super();
-        this.tanggalDaftar = TanggalDaftar;
+        this.tanggalDaftar = tanggalDaftar;
         this.statusPembayaran = statusPembayaran;
         this.kelas = kelas;
     }
