@@ -69,6 +69,7 @@ public class MainApp {
         s1.absen("Raihan");
         s1.absen(123);
         s1.akhiriSesi();
+        s1.daftarMateri("PBO");
         System.out.println(s1.getRekap());
     }
 }

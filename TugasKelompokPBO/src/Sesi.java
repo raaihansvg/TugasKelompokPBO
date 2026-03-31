@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Sesi {
@@ -5,17 +6,20 @@ public class Sesi {
     private String idSesi;
     private Date tanggal;
     private int durasi;
+    private ArrayList<Materi> materi;
     /* KONSTRUKTOR DEFAULT */
     public Sesi(){
         idSesi = "";
         tanggal = new Date();
         durasi = 0;
+        materi = new ArrayList<>();
     }
     /* KONSTRUKTOR INPUT PARAMETER */
     public Sesi(String idSesi, Date tanggal, int durasi) {
         this.idSesi = idSesi;
         this.tanggal = tanggal;
         this.durasi = durasi;
+        this.materi = new ArrayList<>();
     }
     /* METHOD */
     /* SETTER */
@@ -38,6 +42,7 @@ public class Sesi {
     public int getDurasi(){
         return durasi;
     }
+    /* METHOD TAMBAHAN */
 
     public void mulaiSesi() {
         assert idSesi != null : "ID Sesi belum di-set!";
@@ -59,5 +64,10 @@ public class Sesi {
 
     public String getRekap() {
         return "Sesi: " + idSesi + " (" + durasi + " min)";
+    }
+    public void daftarMateri(String judul){
+        Materi m = new Materi();
+        m.setJudul(judul);
+        materi.add(m);
     }
 }
